@@ -42,7 +42,7 @@ export NUM_FILE=$(wc -l < "$FILE_LIST")
 
 if [ "$ASSEMBLER" == "SKESA" ]; then
     echo "launching $SCRIPT_DIR/run_SKESA.sh "
-    init_dir "$RESULT_DIR"
+
 
     JOB_ID=`qsub $ARGS -v FILE_LIST_R1,FILE_LIST_R2,SKESA,STDERR_DIR,STDOUT_DIR -N run_skesa -e "$STDERR_DIR" -o "$STDOUT_DIR" -J 1-$NUM_FILE $SCRIPT_DIR/run_SKESA.sh`
 
@@ -57,7 +57,7 @@ if [ "$ASSEMBLER" == "SKESA" ]; then
 
 elif [ "$ASSEMBLER" == "Spades" ]; then
     echo "launching $SCRIPT_DIR/run_Spades.sh "
-    init_dir "$RESULT_DIR"
+
 
     JOB_ID=`qsub $ARGS -v FILE_LIST_R1,FILE_LIST_R2,SPADES,RESULT_DIR,STDERR_DIR,STDOUT_DIR -N run_spades -e "$STDERR_DIR" -o "$STDOUT_DIR" -J 1-$NUM_FILE $SCRIPT_DIR/run_Spades.sh`
 

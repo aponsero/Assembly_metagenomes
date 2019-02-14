@@ -22,9 +22,13 @@ echo "Host `hostname`">>"$LOG"
 R1=`head -n +${PBS_ARRAY_INDEX} $FILE_LIST_R1 | tail -n 1`
 R2=`head -n +${PBS_ARRAY_INDEX} $FILE_LIST_R2 | tail -n 1`
 
+OUT_DIR="$RESULT_DIR/spades_${PBS_ARRAY_INDEX}_$R1"
+
+mkdir $OUT_DIR
+
 cd $SPADES
 
-./spades.py --meta -1 $R1 -2 $R2 -o $RESULT_DIR
+./spades.py --meta -1 $R1 -2 $R2 -o $OUT_DIR
 
 echo "Finished `date`">>"$LOG"
 

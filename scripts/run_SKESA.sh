@@ -21,6 +21,10 @@ echo "Host `hostname`">>"$LOG"
 R1=`head -n +${PBS_ARRAY_INDEX} $FILE_LIST_R1 | tail -n 1`
 R2=`head -n +${PBS_ARRAY_INDEX} $FILE_LIST_R2 | tail -n 1`
 
+OUT_DIR="$RESULT_DIR/skesa_${PBS_ARRAY_INDEX}_$R1"
+
+mkdir $OUT_DIR
+
 cd $SKESA
 
 ./skesa.centos6.10 --fastq $R1,$R2 > $OUT_FILE
