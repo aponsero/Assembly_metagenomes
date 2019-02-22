@@ -19,12 +19,15 @@ echo "Host `hostname`">>"$LOG"
 
 R1=`head -n +${PBS_ARRAY_INDEX} $FILE_LIST_R1 | tail -n 1`
 R2=`head -n +${PBS_ARRAY_INDEX} $FILE_LIST_R2 | tail -n 1`
+P1="$DATASET_DIR/$R1"
+P2="$DATASET_DIR/$R2"
 
 OUT_DIR="$RESULT_DIR/megahit_${PBS_ARRAY_INDEX}_$R1"
 
 cd $MEGAHIT 
+echo "./megahit -1 $P1 -2 $P2 -o $OUT_DIR"
 
-./megahit -1 $R1 -2 $R2 -o $OUT_DIR
+./megahit -1 $P1 -2 $P2 -o $OUT_DIR
 
 
 echo "Finished `date`">>"$LOG"

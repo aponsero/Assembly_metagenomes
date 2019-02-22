@@ -23,13 +23,16 @@ R1=`head -n +${PBS_ARRAY_INDEX} $FILE_LIST_R1 | tail -n 1`
 R2=`head -n +${PBS_ARRAY_INDEX} $FILE_LIST_R2 | tail -n 1`
 P1="$DATASET_DIR/$R1"
 P2="$DATASET_DIR/$R2"
+I="$DATASET_DIR/$R1_interleaved.fa"
 
-OUT_DIR="$RESULT_DIR/spades_${PBS_ARRAY_INDEX}_$R1"
+OUT_DIR="$RESULT_DIR/idba_${PBS_ARRAY_INDEX}_$R1"
 mkdir $OUT_DIR
 
-cd $SPADES
+cd $IDBA
 
-./spades.py --meta -1 $P1 -2 $P2 -o $OUT_DIR
+bin/fq2fa --merge --filter $P1 $P2 $I
+
+bin/idba -o $OUT_DIR -r $I
 
 echo "Finished `date`">>"$LOG"
 
