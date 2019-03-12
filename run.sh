@@ -44,7 +44,7 @@ if [ "$ASSEMBLER" == "IDBA" ]; then
     echo "launching $SCRIPT_DIR/run_idba.sh "
 
 
-    JOB_ID=`qsub $ARGS -v DATASET_DIR,FILE_LIST_R1,FILE_LIST_R2,IDBA,STDERR_DIR,STDOUT_DIR -N run_skesa -e "$STDERR_DIR" -o "$STDOUT_DIR" -J 1-$NUM_FILE $SCRIPT_DIR/run_idba.sh`
+    JOB_ID=`qsub $ARGS -v DATASET_DIR,FILE_LIST_R1,FILE_LIST_R2,IDBA,RESULT_DIR,STDERR_DIR,STDOUT_DIR -N run_idba -e "$STDERR_DIR" -o "$STDOUT_DIR" -J 1-$NUM_FILE $SCRIPT_DIR/run_idba.sh`
 
     if [ "${JOB_ID}x" != "x" ]; then
          echo Job: \"$JOB_ID\"

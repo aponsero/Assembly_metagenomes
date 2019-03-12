@@ -2,8 +2,8 @@
 
 #PBS -W group_list=bhurwitz
 #PBS -q standard
-#PBS -l select=1:ncpus=28:mem=168gb 
-#PBS -l walltime=48:00:00
+#PBS -l select=1:ncpus=30:mem=1260gb:pcmem=42gb 
+#PBS -l walltime=24:00:00
 #PBS -M aponsero@email.arizona.edu
 #PBS -m bea
 
@@ -32,7 +32,7 @@ cd $IDBA
 
 bin/fq2fa --merge --filter $P1 $P2 $I
 
-bin/idba -o $OUT_DIR -r $I
+bin/idba_ud -o $OUT_DIR -r $I
 
 echo "Finished `date`">>"$LOG"
 

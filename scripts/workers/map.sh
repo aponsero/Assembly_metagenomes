@@ -7,10 +7,10 @@
 #PBS -M aponsero@email.arizona.edu
 #PBS -m bea
 
-CONTIG_DIR="/rsgrps/bhurwitz/alise/my_data/Nostoc_project/Lichen_metagenomes/assemblies/test_assemblers/run_test1_spades/spades_1_S1_R1_QC.fq"
+CONTIG_DIR="/rsgrps/bhurwitz/alise/my_data/Nostoc_project/Lichen_metagenomes/assemblies/test_assemblers/run_test1_spades/spades_9_S10_R1_QC.fq"
 CONTIG="$CONTIG_DIR/contigs.fasta"
-P1="/rsgrps/bhurwitz/alise/my_data/Nostoc_project/Lichen_metagenomes/fastQC/QC_sequences/S1_R1_QC.fq"
-P2="/rsgrps/bhurwitz/alise/my_data/Nostoc_project/Lichen_metagenomes/fastQC/QC_sequences/S1_R2_QC.fq"
+P1="/rsgrps/bhurwitz/alise/my_data/Nostoc_project/Lichen_metagenomes/fastQC/QC_sequences/S10_R1_QC.fq"
+P2="/rsgrps/bhurwitz/alise/my_data/Nostoc_project/Lichen_metagenomes/fastQC/QC_sequences/S10_R2_QC.fq"
 OUT_DIR="$CONTIG_DIR/map_reads"
 mkdir $OUT_DIR
 MAP_FILE="$OUT_DIR/aln.sam.gz"

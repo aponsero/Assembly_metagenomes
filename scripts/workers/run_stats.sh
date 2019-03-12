@@ -12,7 +12,7 @@ source my_project/bin/activate
 
 cd /rsgrps/bhurwitz/alise/my_data/Nostoc_project/Pipelines/Assembly_metagenomes/scripts/workers
 
-LIST="/rsgrps/bhurwitz/alise/my_data/Nostoc_project/Lichen_metagenomes/fastQC/QC_sequences/list.txt"
+LIST="/rsgrps/bhurwitz/alise/my_data/Nostoc_project/Lichen_metagenomes/assemblies/test_assemblers/run_test1_spades/list.txt"
 RUN="/rsgrps/bhurwitz/alise/my_data/Nostoc_project/Pipelines/Assembly_metagenomes/scripts/workers/stats.pl"
 
 while read CDS; do

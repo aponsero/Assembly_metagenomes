@@ -8,7 +8,7 @@ my $fcds="$ARGV[0]";
 #my $outfile="$ARGV[1]";
 
 my $in  = Bio::SeqIO-> new ( -file   => $fcds,
-                             -format => 'fastq' );
+                             -format => 'fasta' );
 
 my $cpt=1;
 my $cptsmall=0;
