@@ -23,6 +23,7 @@ P1="$DATASET_DIR/$R1"
 P2="$DATASET_DIR/$R2"
 
 OUT_DIR="$RESULT_DIR/megahit_${PBS_ARRAY_INDEX}_$R1"
+#mkdir $OUT_DIR
 
 cd $MEGAHIT 
 echo "./megahit -1 $P1 -2 $P2 -o $OUT_DIR"

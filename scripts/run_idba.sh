@@ -32,7 +32,7 @@ cd $IDBA
 
 bin/fq2fa --merge --filter $P1 $P2 $I
 
-bin/idba_ud -o $OUT_DIR -r $I
+#bin/idba_ud -o $OUT_DIR -r $I
 
 echo "Finished `date`">>"$LOG"
 

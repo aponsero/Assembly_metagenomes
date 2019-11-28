@@ -5,18 +5,19 @@ export SKESA="/rsgrps/bhurwitz/alise/tools"
 export IDBA="/rsgrps/bhurwitz/alise/tools/idba"
 export MEGAHIT="/rsgrps/bhurwitz/alise/tools/megahit"
 # where the dataset to prepare is
-export DATASET_DIR="/rsgrps/bhurwitz/alise/my_data/Nostoc_project/Lichen_metagenomes/fastQC/QC_sequences"
-export FILE_LIST_R1="/rsgrps/bhurwitz/alise/my_data/Nostoc_project/Lichen_metagenomes/fastQC/QC_sequences/paire1.list"
-export FILE_LIST_R2="/rsgrps/bhurwitz/alise/my_data/Nostoc_project/Lichen_metagenomes/fastQC/QC_sequences/paire2.list"
-export ASSEMBLER="SKESA" # SKESA, IDBA, Spades or Megahit
-export RESULT_DIR="/rsgrps/bhurwitz/alise/my_data/Nostoc_project/Lichen_metagenomes/assemblies/test_assemblers/run_test1_SKESA" #provide the path of an existing folder
+export DATASET_DIR=""
+export FILE_LIST_R1=""
+export FILE_LIST_R2=""
+export ASSEMBLER="Megahit" # SKESA, IDBA, Spades or Megahit
+export RESULT_DIR=""
+# Note: provide the path of an existing folder
 #place to store the scripts
 export SCRIPT_DIR="$PWD/scripts"
 export WORKER_DIR="$SCRIPT_DIR/workers" 
 # User informations
-export QUEUE="standard"
-export GROUP="bhurwitz"
-export MAIL_USER="aponsero@email.arizona.edu"
+export QUEUE="windfall"
+export GROUP=""
+export MAIL_USER=""
 export MAIL_TYPE="bea"
 
 #
