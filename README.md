@@ -42,4 +42,4 @@ You can also modify
   ```bash
   ./submit.sh
   ```
-  This command will place two jobs in queue.
+  This command will place one job in queue.
